@@ -11,6 +11,9 @@ TspModel::TspModel(int n, double** costs){
 void TspModel::solver(){
   IloEnv env;
   IloModel model(env);
+  
+  IloCplex STSP(model);
+
 
   env.setName("Branch and Cut");
   model.setName("Symetrical Traveling Salesman Problem");
